@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dynamic Page Generation Example</title>
+  </head>
+  <body>
+    <h1>Dynamic Page Generation</h1>
+    <button id="createPageBtn">Create New Page</button>
+    <div id="content"></div>
+
+    <script>
+        const createPageBtn = document.getElementById('createPageBtn');
+        const contentDiv = document.getElementById('content');
+        let pageCount = 1;
+
+        createPageBtn.addEventListener('click', () => {
+            const newPageContent = '<h2>Page ${pageCount}</h2><p>This is the content of the page ${pageCount}.</p>';
+            const newPageDiv = document.createElement('div');
+            newPageDiv.innerHTML = newPageContent;
+            contentDiv.appendChild(newPageDiv);
+            pageCount++;e
+        });
+    </script>
+  </body>
+</html>
